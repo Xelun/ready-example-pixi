@@ -35,4 +35,11 @@ window.onload = async () => {
     TEXT_EXAMPLE(APP, "SCRIPTIN", .5, .25);
 
 
+    // -- SPINE
+    await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
+
+    SPINE_EXAMPLE(APP, "spineboy", .25, .5);
+
+
+
 }
