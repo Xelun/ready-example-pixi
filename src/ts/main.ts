@@ -1,12 +1,10 @@
+import emitterConfig from "../assets/emitter/emitter.json";
 import { PARTICLE_EXAMPLE } from "./example/ParticleExample";
 import { SPINE_EXAMPLE } from "./example/SpineExample";
 import { SPRITE_EXAMPLE } from "./example/SpriteExample";
 import { TEXT_EXAMPLE } from "./example/TextExample";
-import { TRANSLATE_EXAMPLE } from "./example/TranslateExample";
 import { TWEEN_EXAMPLE } from "./example/TweenExample";
 import { PixiApp } from "./utils/PixiApp";
-import { Translate } from "./utils/Translate";
-import emitterConfig from "../assets/emitter/emitter.json";
 
 window.onload = async () => {
     // Create the pixi app
@@ -50,4 +48,7 @@ window.onload = async () => {
     ];
 
     PARTICLE_EXAMPLE(APP, textures, emitterConfig, .5, .75);
+
+    // -- TWEEN
+    TWEEN_EXAMPLE(APP, .75, .5);
 }
