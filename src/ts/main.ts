@@ -6,6 +6,7 @@ import { TRANSLATE_EXAMPLE } from "./example/TranslateExample";
 import { TWEEN_EXAMPLE } from "./example/TweenExample";
 import { PixiApp } from "./utils/PixiApp";
 import { Translate } from "./utils/Translate";
+import emitterConfig from "../assets/emitter/emitter.json";
 
 window.onload = async () => {
     // Create the pixi app
@@ -39,7 +40,14 @@ window.onload = async () => {
     await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
 
     SPINE_EXAMPLE(APP, "spineboy", .25, .5);
+    
 
+    // -- PARTICLE
+    await APP.loadAsset("monsters", "/assets/image/monsters.json"); // Load atlas with monsters to show on the particle emitter
+    let textures = [
+        { textures: ["eggHead", "flowerTop", "helmlok", "skully"], frameRate: 6 }, // Animated particle
+        "bunny", // Static particle
+    ];
 
-
+    PARTICLE_EXAMPLE(APP, textures, emitterConfig, .5, .75);
 }
