@@ -1,3 +1,4 @@
+import { SPRITE_EXAMPLE } from "./example/SpriteExample";
 import { PixiApp } from "./utils/PixiApp";
 
 window.onload = async () => {
@@ -11,6 +12,14 @@ window.onload = async () => {
         sharedTicker: true,
         autoDensity: true,
         clearBeforeRender: true,
+    });
+
+
+    // -- SPRITE
+    await APP.loadAsset("bunny", "/assets/image/bunny.png"); // Load the sprite image
+
+    SPRITE_EXAMPLE(APP, "bunny", .5, .5, (sprite, dt) => {
+        sprite.rotation += dt * .05;
     });
 
 
