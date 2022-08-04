@@ -1,5 +1,11 @@
+import { PARTICLE_EXAMPLE } from "./example/ParticleExample";
+import { SPINE_EXAMPLE } from "./example/SpineExample";
 import { SPRITE_EXAMPLE } from "./example/SpriteExample";
+import { TEXT_EXAMPLE } from "./example/TextExample";
+import { TRANSLATE_EXAMPLE } from "./example/TranslateExample";
+import { TWEEN_EXAMPLE } from "./example/TweenExample";
 import { PixiApp } from "./utils/PixiApp";
+import { Translate } from "./utils/Translate";
 
 window.onload = async () => {
     // Create the pixi app
@@ -21,6 +27,12 @@ window.onload = async () => {
     SPRITE_EXAMPLE(APP, "bunny", .5, .5, (sprite, dt) => {
         sprite.rotation += dt * .05;
     });
+
+    
+    // -- TEXT
+    await APP.loadFont("SCRIPTIN", "/assets/font/SCRIPTIN.ttf"); // Load a custom font
+
+    TEXT_EXAMPLE(APP, "SCRIPTIN", .5, .25);
 
 
 }
