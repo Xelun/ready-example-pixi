@@ -1,0 +1,52 @@
+{
+  "name": "ready-example-pixi",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server --mode development",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "core-js": "^3.20.0",
+    "html-webpack-plugin": "^5.5.0",
+    "standard-version": "^9.3.0",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.8.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "@pixi/app": "~6.3.0",
+    "@pixi/constants": "~6.3.0",
+    "@pixi/core": "~6.3.0",
+    "@pixi/display": "~6.3.0",
+    "@pixi/interaction": "~6.3.0",
+    "@pixi/loaders": "~6.3.0",
+    "@pixi/math": "~6.3.0",
+    "@pixi/runner": "~6.3.0",
+    "@pixi/settings": "~6.3.0",
+    "@pixi/sprite": "~6.3.0",
+    "@pixi/spritesheet": "~6.3.0",
+    "@pixi/text": "~6.3.0",
+    "@pixi/ticker": "~6.3.0",
+    "@pixi/utils": "~6.3.0",
+    "@pixi/graphics": "~6.3.0",
+    "@pixi/graphics-extras": "~6.3.0",
+    "@pixi/mesh": "~6.3.0",
+    "@pixi/mesh-extras": "~6.3.0",
+    "@pixi/particle-container": "~6.3.0",
+    "@pixi/particle-emitter": "~5.0.5",
+    "@pixi/sprite-animated": "~6.3.0",
+    "@pixi/sprite-tiling": "~6.3.0",
+    "@pixi/text-bitmap": "~6.3.0",
+    "@tweenjs/tween.js": "18.6.4",
+    "i18next": "^21.6.14",
+    "pixi-spine": "~3.0.13"
+  }
+}
