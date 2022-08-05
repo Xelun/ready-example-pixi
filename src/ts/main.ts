@@ -6,7 +6,9 @@ import { TRANSLATE_EXAMPLE } from "./example/TranslateExample";
 import { TWEEN_EXAMPLE } from "./example/TweenExample";
 import { PixiApp } from "./utils/PixiApp";
 import { Translate } from "./utils/Translate";
+import { Audio } from "./utils/Audio";
 import emitterConfig from "../assets/emitter/emitter.json";
+import { AUDIO_EXAMPLE } from "./example/AudioExample";
 
 window.onload = async () => {
     // Create the pixi app
@@ -20,6 +22,18 @@ window.onload = async () => {
         autoDensity: true,
         clearBeforeRender: true,
     });
+
+    // AUDIO
+    await Audio.load("upbeat", [ "/assets/audio/upbeat.mp3"]);
+    await Audio.load("count", [ "/assets/audio/count.webm"], {
+        "one": [0, 450],
+        "two": [2000, 250],
+        "three": [4000, 350],
+        "four": [6000, 380],
+        "five": [8000, 340],
+    });
+
+    AUDIO_EXAMPLE(APP, .2, .1);
 
 
     // -- SPRITE
