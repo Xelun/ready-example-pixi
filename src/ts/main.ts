@@ -39,21 +39,14 @@ window.onload = async () => {
     // -- SPRITE
     await APP.loadAsset("bunny", "/assets/image/bunny.png"); // Load the sprite image
 
-    SPRITE_EXAMPLE(APP, "bunny", .5, .5, (sprite, dt) => {
+    SPRITE_EXAMPLE(APP, "bunny", .2, .3, (sprite, dt) => {
         sprite.rotation += dt * .05;
     });
-
     
     // -- TEXT
     await APP.loadFont("SCRIPTIN", "/assets/font/SCRIPTIN.ttf"); // Load a custom font
 
-    TEXT_EXAMPLE(APP, "SCRIPTIN", .5, .25);
-
-
-    // -- SPINE
-    await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
-
-    SPINE_EXAMPLE(APP, "spineboy", .25, .5);
+    TEXT_EXAMPLE(APP, "SCRIPTIN", .2, .5);
     
 
     // -- PARTICLE
@@ -63,10 +56,16 @@ window.onload = async () => {
         "bunny", // Static particle
     ];
 
-    PARTICLE_EXAMPLE(APP, textures, emitterConfig, .5, .75);
+    PARTICLE_EXAMPLE(APP, textures, emitterConfig, .2, .7);
+
+
+    // -- SPINE
+    await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
+
+    SPINE_EXAMPLE(APP, "spineboy", .8, .1);
 
     // -- TWEEN
-    TWEEN_EXAMPLE(APP, .75, .5);
+    TWEEN_EXAMPLE(APP, .8, .3);
     
     // -- TRANSLATE
     await Translate.init({
@@ -76,5 +75,5 @@ window.onload = async () => {
         ],
     });
     
-    TRANSLATE_EXAMPLE(APP, "Helvetica", .75, .25);
+    TRANSLATE_EXAMPLE(APP, "Helvetica", .8, .5);
 }

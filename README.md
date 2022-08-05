@@ -1,20 +1,17 @@
-# Custom PixiJS + Typescript + Webpack + Spine + Particles + Tweens + Translations
+# Project with different libraries ready to use
 
-Project with PixiJS (v6), Typescript, Yarn and Webpack that includes Tweens, Spine, Particles and translations.
+## Techstack
 
-## Modules
+- **Typescript** as language
+- **Webpack** as module bundler
+- **Yarn** as package manager
 
-### Tweens
-
-For tweens it uses the TweeJS library: https://github.com/tweenjs/tween.js/
-
-### Spine
-
-For Spoine it uses the Spine integration with Pixi: https://github.com/pixijs/spine
-
-### Translations
-
-To get a translation depending on the language, it uses i18next: https://www.i18next.com/
+- **PixiJS** (https://github.com/pixijs/pixijs) as rendering library
+- **Pixi Spine** (https://github.com/pixijs/spine) as library to show bone animations made on Spine on PixiJS
+- **Pixi Particles** (https://github.com/pixijs/particle-emitter) as particle system library for PixiJS
+- **TweenJS** (https://github.com/tweenjs/tween.js) as tweening library
+- **i18next** (https://www.i18next.com/) as text translation library
+- **Howler** (https://github.com/goldfire/howler.js) as audio library
 
 ## Run 
 
@@ -35,3 +32,14 @@ yarn run serve
 ```
 https://localhost:3000
 ```
+
+
+## Credits
+
+- Images:
+    - From PixiJS examples
+    - My own
+- Spine:
+    - From Pixi-spine examples
+- Music: 
+    - Lexin_Music from Pixabay

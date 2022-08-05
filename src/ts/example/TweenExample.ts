@@ -3,23 +3,33 @@ import { PixiApp } from "../utils/PixiApp";
 import { Tween } from "../utils/Tween";
 
 export const TWEEN_EXAMPLE = (app: PixiApp, percentPosX: number, percentPosY: number) => {
+    // Create the container for the whole example
+    let container = new PIXI.Container();
+    container.x = app.width * percentPosX;
+    container.y = app.height * percentPosY;
+
+    app.onResize((width, height) => {
+        container.x = width * percentPosX;
+        container.y = height * percentPosY;
+    });
+    app.addVisual(container);
+
+    // Background
+    let bg = PIXI.Sprite.from(PIXI.Texture.WHITE);
+    bg.tint = 0x333333;
+    bg.alpha = .5;
+    bg.width = 300;
+    bg.height = 150;
+    bg.anchor.set(.5, .5);
+    container.addChild(bg);
+    
     // Create the sprite to show the sprite, give it a size and position
     let sprite = PIXI.Sprite.from(PIXI.Texture.WHITE);
     sprite.tint = 0x333388;
     sprite.anchor.set(.5, .5);
     sprite.width = 50;
     sprite.height = 50;
-    sprite.x = app.width * percentPosX;
-    sprite.y = app.height * percentPosY;
-
-    // Change the position of the sprite each time the app is resized
-    app.onResize((width, height) => {
-        sprite.x = width * percentPosX;
-        sprite.y = height * percentPosY;
-    });
-
-    // Add the sprite to the scene
-    app.addVisual(sprite);
+    container.addChild(sprite);
 
     // Create the tween
     let tween = new Tween({ 
