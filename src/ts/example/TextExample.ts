@@ -21,6 +21,11 @@ export const TEXT_EXAMPLE = (app: PixiApp, fontName: string, percentPosX: number
     bg.height = 150;
     bg.anchor.set(.5, .5);
     container.addChild(bg);
+
+    let title = new PIXI.Text("Text", { fontFamily: "Helvetica", fill: 0xffffff, fontSize: 20, fontWeight: "bold" });
+    title.x = -145;
+    title.y = -70;
+    container.addChild(title);
     
     // Create a text
     let text = new PIXI.Text("", { fontFamily: fontName, fill: 0xCC5555, align: "center", fontSize: 30, fontWeight: "bold" });

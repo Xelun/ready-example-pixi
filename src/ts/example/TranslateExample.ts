@@ -23,6 +23,11 @@ export const TRANSLATE_EXAMPLE = (app: PixiApp, fontName: string, percentPosX: n
     bg.anchor.set(.5, .5);
     container.addChild(bg);
 
+    let title = new PIXI.Text("Translations", { fontFamily: "Helvetica", fill: 0xffffff, fontSize: 20, fontWeight: "bold" });
+    title.x = -145;
+    title.y = -70;
+    container.addChild(title);
+
     // Create a text
     let text = new PIXI.Text(
         Translate.translate("hello"), 

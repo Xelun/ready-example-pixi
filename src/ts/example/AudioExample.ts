@@ -33,6 +33,12 @@ export const AUDIO_EXAMPLE = async (app: PixiApp, percentPosX: number, percentPo
     bg.anchor.set(.5, .5);
     container.addChild(bg);
 
+    let title = new PIXI.Text("Audio", { fontFamily: "Helvetica", fill: 0xffffff, fontSize: 20, fontWeight: "bold" });
+    title.x = -145;
+    title.y = -70;
+    container.addChild(title);
+
+
     // -- Mute button
     let muteButton = PIXI.Sprite.from("audio");
     muteButton.anchor.set(.5, .5);

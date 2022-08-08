@@ -22,6 +22,11 @@ export const TWEEN_EXAMPLE = (app: PixiApp, percentPosX: number, percentPosY: nu
     bg.height = 150;
     bg.anchor.set(.5, .5);
     container.addChild(bg);
+
+    let title = new PIXI.Text("Tweens", { fontFamily: "Helvetica", fill: 0xffffff, fontSize: 20, fontWeight: "bold" });
+    title.x = -145;
+    title.y = -70;
+    container.addChild(title);
     
     // Create the sprite to show the sprite, give it a size and position
     let sprite = PIXI.Sprite.from(PIXI.Texture.WHITE);

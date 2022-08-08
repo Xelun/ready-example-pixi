@@ -23,6 +23,11 @@ export const PARTICLE_EXAMPLE = (app: PixiApp, textures: (AnimatedParticle | str
     bg.anchor.set(.5, .5);
     container.addChild(bg);
 
+    let title = new PIXI.Text("Particles", { fontFamily: "Helvetica", fill: 0xffffff, fontSize: 20, fontWeight: "bold" });
+    title.x = -145;
+    title.y = -70;
+    container.addChild(title);
+
     // Create the emitter
     let emitter = new ParticleEmitter({
         textures: textures,
