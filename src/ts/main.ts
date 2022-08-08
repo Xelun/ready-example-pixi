@@ -9,6 +9,7 @@ import { Translate } from "./utils/Translate";
 import { Audio } from "./utils/Audio";
 import emitterConfig from "../assets/emitter/emitter.json";
 import { AUDIO_EXAMPLE } from "./example/AudioExample";
+import { SHADER_EXAMPLE } from "./example/ShaderExample";
 
 window.onload = async () => {
     // Create the pixi app
@@ -76,4 +77,9 @@ window.onload = async () => {
     });
     
     TRANSLATE_EXAMPLE(APP, "Helvetica", .8, .5);
+
+    // -- SHADERS
+    await APP.loadAsset("perlin", "/assets/image/perlin.png"); // Load the perlin noise map
+
+    SHADER_EXAMPLE(APP, .8, .7);
 }

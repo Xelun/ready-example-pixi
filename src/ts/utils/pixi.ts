@@ -21,12 +21,23 @@ export * from '@pixi/sprite-tiling';
 export * from '@pixi/particle-container';
 export * from '@pixi/text-bitmap';
 
+// Shaders / Filters
+import { BlurFilter, BlurFilterPass } from '@pixi/filter-blur';
+import { GlitchFilter } from '@pixi/filter-glitch';
+export const filters = {
+  BlurFilter, BlurFilterPass,
+  GlitchFilter
+};
+
+// Particles
 import * as particles from "@pixi/particle-emitter";
 export { particles };
 
+// Spine
 import { Spine } from "pixi-spine";
 export { Spine };
 
+// Tweens
 import { Easing } from '@tweenjs/tween.js';
 export { Easing };
 

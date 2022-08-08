@@ -28,7 +28,8 @@ module.exports = (env, argv) => {
         resolve: { extensions: ['.ts', '.js'] },
         module: {
             rules: [
-                { test: /\.ts$/, loader: 'ts-loader', },
+                { test: /\.(glsl|vs|fs|vert|frag)$/, loader: 'raw-loader' },
+                { test: /\.ts$/, loader: 'ts-loader' },
             ]
         },
         plugins: [

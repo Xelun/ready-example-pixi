@@ -9,6 +9,7 @@
 - **PixiJS** (https://github.com/pixijs/pixijs) as rendering library
 - **Pixi Spine** (https://github.com/pixijs/spine) as library to show bone animations made on Spine on PixiJS
 - **Pixi Particles** (https://github.com/pixijs/particle-emitter) as particle system library for PixiJS
+- **Pixi Filters** (https://filters.pixijs.download/main/docs/PIXI.filters.html) as precreated shaders for PixiJS
 - **TweenJS** (https://github.com/tweenjs/tween.js) as tweening library
 - **i18next** (https://www.i18next.com/) as text translation library
 - **Howler** (https://github.com/goldfire/howler.js) as audio library
