@@ -2,7 +2,6 @@ import * as PIXI from '../utils/pixi';
 import { PixiApp } from "../utils/PixiApp";
 import vertex from "../../assets/shader/default.vert";
 import fragment from "../../assets/shader/custom.frag";
-import { Texture } from "../utils/pixi";
 
 export const SHADER_EXAMPLE = (app: PixiApp, percentPosX: number, percentPosY: number) => {
     // Create the container for the whole example
@@ -94,7 +93,7 @@ export const SHADER_EXAMPLE = (app: PixiApp, percentPosX: number, percentPosY: n
 
     const uniforms = { 
         delta: 0,
-        uPerlin: Texture.from("perlin"),
+        uPerlin: PIXI.Texture.from("perlin"),
     };
     let filter3 = new PIXI.Filter(vertex, fragment, uniforms);
     sprite3.filters = [ filter3 ];

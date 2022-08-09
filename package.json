@@ -52,6 +52,7 @@
     "@tweenjs/tween.js": "18.6.4",
     "howler": "^2.2.3",
     "i18next": "^21.6.14",
-    "pixi-spine": "~3.0.13"
+    "pixi-spine": "~3.0.13",
+    "pretender": "^3.4.3"
   }
 }

@@ -10,6 +10,7 @@ import { Audio } from "./utils/Audio";
 import emitterConfig from "../assets/emitter/emitter.json";
 import { AUDIO_EXAMPLE } from "./example/AudioExample";
 import { SHADER_EXAMPLE } from "./example/ShaderExample";
+import { MOCK_EXAMPLE } from "./example/MockExample";
 
 window.onload = async () => {
     // Create the pixi app
@@ -50,6 +51,12 @@ window.onload = async () => {
     TEXT_EXAMPLE(APP, "SCRIPTIN", .2, .5);
     
 
+    // -- SPINE
+    await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
+
+    SPINE_EXAMPLE(APP, "spineboy", .2, .7);
+
+
     // -- PARTICLE
     await APP.loadAsset("monsters", "/assets/image/monsters.json"); // Load atlas with monsters to show on the particle emitter
     let textures = [
@@ -57,16 +64,10 @@ window.onload = async () => {
         "bunny", // Static particle
     ];
 
-    PARTICLE_EXAMPLE(APP, textures, emitterConfig, .2, .7);
-
-
-    // -- SPINE
-    await APP.loadAsset("spineboy", "/assets/spine/spineboy.json"); // Load the spine assets
-
-    SPINE_EXAMPLE(APP, "spineboy", .8, .1);
+    PARTICLE_EXAMPLE(APP, textures, emitterConfig, .2, .9);
 
     // -- TWEEN
-    TWEEN_EXAMPLE(APP, .8, .3);
+    TWEEN_EXAMPLE(APP, .8, .1);
     
     // -- TRANSLATE
     await Translate.init({
@@ -76,10 +77,13 @@ window.onload = async () => {
         ],
     });
     
-    TRANSLATE_EXAMPLE(APP, "Helvetica", .8, .5);
+    TRANSLATE_EXAMPLE(APP, "Helvetica", .8, .3);
 
     // -- SHADERS
     await APP.loadAsset("perlin", "/assets/image/perlin.png"); // Load the perlin noise map
 
-    SHADER_EXAMPLE(APP, .8, .7);
+    SHADER_EXAMPLE(APP, .8, .5);
+
+    // -- MOCK HTTP CALLS
+    MOCK_EXAMPLE(APP, .8, .7);
 }

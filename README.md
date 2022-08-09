@@ -13,6 +13,7 @@
 - **TweenJS** (https://github.com/tweenjs/tween.js) as tweening library
 - **i18next** (https://www.i18next.com/) as text translation library
 - **Howler** (https://github.com/goldfire/howler.js) as audio library
+- **Pretender** (https://github.com/pretenderjs/pretender) as mock server library
 
 ## Run 
 

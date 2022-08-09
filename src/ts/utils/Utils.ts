@@ -47,4 +47,33 @@ export class Utils {
 
         return base;
     }
+
+    /**
+     * Do an http call
+     * @param url Url to call
+     * @param options Options of the http call
+     * @param retryAttempts Maximum number of attempts before return an error if the url is not reachable
+     */
+    public static httpCall(url: string, options: RequestInit, json: boolean = true) {
+        options.headers = new Headers(options.headers);
+        
+        return new Promise<any>((resolve, reject) => {
+            fetch(url, options)
+                .then((response) => {
+                    if(!response) reject();
+    
+                    if(json) {
+                        response.json().then((result) => {
+                            if(response.ok) resolve(result)
+                            else reject(result);
+                        });
+                    } else {
+                        response.text().then((result) => {
+                            if(response.ok) resolve(result)
+                            else reject(result);
+                        });
+                    }
+                }, (error) => reject(error))
+        });
+    }
 }
